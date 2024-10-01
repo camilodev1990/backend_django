@@ -15,7 +15,7 @@ environ.Env.read_env()
 SECRET_KEY = env.str('SECRET_KEY')
 
 # modo desarrollo - produccion 
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = env.bool('DEBUG', default=True)
 
 #host a los que se puede acceder 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default='localhost')
@@ -40,6 +40,7 @@ THIRD_APPS = [
     'rest_framework',
     'django_extensions',
     'corsheaders',
+    'channels',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
